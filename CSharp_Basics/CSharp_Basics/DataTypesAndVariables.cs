@@ -92,16 +92,18 @@ namespace CSharp_Basics
         //        /// Take moment to play with it.
         //        /// you can do same with other math operations.
         //        /// </summary>
-        //        [Test]
-        //        public void Int_Increments()
-        //        {
-        //            int example = 5;
-        //            example += 10;
-        //            //example is 15
-        //            example++;
-        //            //example is 16 know;
-        //            Assert.AreEqual(example, 16);
-        //        }
+        [Test]
+        public void Int_Increments()
+        {
+            int example = 5;
+            example += 10;
+            //example is 15
+            example++;
+            //example is 16 know;
+            Assert.AreEqual(example++, 16);
+            Assert.AreEqual(example, 17);
+            Assert.AreEqual(++example, 18);
+        }
 
         //        /// <summary>
         //        /// bool is the most straightforward and most useful it can only accept true and false.
