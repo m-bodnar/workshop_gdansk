@@ -87,6 +87,10 @@ namespace CSharp_Basics
 
             string result = theString.Substring(16, 5);
 
+            // inna wersja rozwiązania
+            // var resultArray = theString.Split(' ');
+            // var result = resultArray[2];
+
             Assert.AreEqual(result, "thing");
         }
     }
