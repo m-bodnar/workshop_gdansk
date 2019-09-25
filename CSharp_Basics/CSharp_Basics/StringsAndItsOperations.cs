@@ -16,11 +16,16 @@ namespace CSharp_Basics
         //        /// 
         //        /// Create new string with your name and then add them together
         //        /// </summary>
-        //        [Test]
-        //        public void Bascis_Of_Strings()
-        //        {
-        //            string Example = "This is example string";
-        //        }
+        [Test]
+        public void Bascis_Of_Strings()
+        {
+            string Example = "This is example string";
+            string New = "This is my new string";
+            Console.WriteLine(Example);
+            Console.WriteLine(New);
+            Console.WriteLine(Example + " " + New);
+            
+        }
 
         //        /// <summary>
         //        ///  string is  first Reference Type you see (We will talk more about them later)
