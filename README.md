@@ -3,3 +3,7 @@ Hello Gdansk!
 
 
 Zmiana jakas
+
+
+kajIdsjuzsiodjzsdjzsiodkjszd
+++++++++++++++++++++++++++++
