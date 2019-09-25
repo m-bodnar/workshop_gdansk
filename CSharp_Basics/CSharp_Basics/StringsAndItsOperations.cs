@@ -63,16 +63,17 @@ namespace CSharp_Basics
         //        /// https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=netframework-4.7.1#Starting
         //        /// create string with both x and y insed
         //        /// </summary>
-        //        [Test]
-        //        public void String_Format()
-        //        {
-        //            int x = 500;
-        //            int y = 453;
-        //            string result;
-        //
-        //            StringAssert.Contains(result, x.ToString());
-        //            StringAssert.Contains(result, y.ToString());
-        //        }
+        [Test]
+        public void String_Format()
+        {
+            int x = 500;
+            int y = 453;
+
+            string result = $"x is {x} and y is {y}";
+
+            StringAssert.Contains(x.ToString(), result);
+            StringAssert.Contains(y.ToString(), result);
+        }
 
         //        /// <summary>
         //        /// From theString return word "thing".
