@@ -2,7 +2,7 @@
 Hello Gdansk!
 
 
-Zmiana jakas
+Zmiana jakas lul lol 
 
 
 kajIdsjuzsiodjzsdjzsiodkjszd
