@@ -23,29 +23,30 @@ namespace CSharp_Basics
         // usefull link: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/value-types
 
         //        /// <summary>
-        //        /// Integers are symbolized as int
-        //        /// create 3 integers with following names
-        //        /// singleDigit, number, lessThanZero
-        //        /// make they values:  6   14  -100
-        //        /// </summary>
-        //        [Test]
-        //        public void Creating_Integeres()
-        //        {
-        //            // int - describes type
-        //            // example - is name of variable, english names are preferred
-        //            // =  equal sign is used for assigning values.
-        //            // 0 - the value
-        //            //  ; - IMPORTANT ';' sign means and of the command usually it is on end of the line - remember about it
-        //            int example = 0;
-        //
-        //            Assert.AreEqual(example, 0, "Example Has wrong value did you changed it?");
-        //            Assert.AreEqual(singleDigit, 6, "Example Has wrong value did you changed it?");
-        //            Assert.That(singleDigit, Is.TypeOf<int>(), "You sure it is int?");
-        //            Assert.AreEqual(number, 14, "Example Has wrong value did you changed it?");
-        //            Assert.That(singleDigit, Is.TypeOf<int>(), "You sure it is int?");
-        //            Assert.AreEqual(lessThanZero, -100, "Example Has wrong value did you changed it?");
-        //            Assert.That(singleDigit, Is.TypeOf<int>(), "You sure it is int?");
-        //        }
+        /// Integers are symbolized as int
+        /// create 3 integers with following names
+        /// singleDigit, number, lessThanZero
+        /// make they values:  6   14  -100
+        /// </summary>
+        [Test]
+        public void Creating_Integeres()
+        {
+            ////int -describes type
+            ////         example - is name of variable, english names are preferred
+            ////         = equal sign is used for assigning values.
+
+            ////        0 - the value
+            ////          ; -IMPORTANT ';' sign means and of the command usually it is on end of the line - remember about it
+                    int example = 0;
+
+            //Assert.AreEqual(example, 0, "Example Has wrong value did you changed it?");
+            //Assert.AreEqual(singleDigit, 6, "Example Has wrong value did you changed it?");
+            //Assert.That(singleDigit, Is.TypeOf<int>(), "You sure it is int?");
+            //Assert.AreEqual(number, 14, "Example Has wrong value did you changed it?");
+            //Assert.That(singleDigit, Is.TypeOf<int>(), "You sure it is int?");
+            //Assert.AreEqual(lessThanZero, -100, "Example Has wrong value did you changed it?");
+            //Assert.That(singleDigit, Is.TypeOf<int>(), "You sure it is int?");
+        }
 
         //        /// <summary>
         //        /// Basic operations at integers are
