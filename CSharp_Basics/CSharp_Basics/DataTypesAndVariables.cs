@@ -78,7 +78,7 @@ namespace CSharp_Basics
             Assert.AreEqual(20, multiply, "Example Has wrong value did you changed it?");
             Assert.That(multiply, Is.TypeOf<int>(), "You sure it is int?");
             Assert.AreEqual(1.25, divide, "Example Has wrong value did you changed it?");
-            Assert.That(divide, Is.TypeOf<double>(), "You sure it is int?");
+            Assert.That(divide, Is.TypeOf<double>(), "You sure it is double?");
         }
 
         //        /// <summary>
@@ -112,12 +112,13 @@ namespace CSharp_Basics
         //        /// Assign to them true and false.
         //        /// Try to assign number 6 to them.
         //        /// </summary>
-        //        public void Bool()
-        //        {
-
-        //            Assert.True(truth);
-        //            Assert.True(notTruth);
-        //        }
+        //public void Bool()
+        //{
+        //    bool displayed = true;
+        //    bool visible = false;
+        //    Assert.True(truth);
+        //    Assert.True(notTruth);
+        //}
 
         //            /// <summary>
         //            /// There are many ways to store real numbers
@@ -126,14 +127,30 @@ namespace CSharp_Basics
         //            /// Float, Double are faster but not always accurate. Ask your teacher for more details.
         //            /// repeat operations add, subtract, divide, and multiply for double
         //            /// </summary>
-        //            public void float_double_decimal()
-        //            {
-        //                decimal exampleDecimal = new decimal(10.5);
-        //
-        //                double X = 140000000000000000000000000.001;
-        //                double Y = 0.0000000000000000000000000008;
-        //
-        //            }
+        [Test]
+        public void float_double_decimal()
+        {
+            decimal exampleDecimal = new decimal(10.5);
+
+            float x = 14;
+            float y = 2;
+
+            float add = x + y;
+            float subtract = x - y;
+
+            Assert.AreEqual(16.0f, add, "Example Has wrong value did you changed it?");
+            Assert.AreEqual(12.0f, subtract, "Example Has wrong value did you changed it?");
+
+            ////double x = 14;
+            ////double y = 2;
+
+            ////double add = x + y;
+            ////double subtract = x - y;
+
+            ////Assert.AreEqual(16, add, "Example Has wrong value did you changed it?");
+            ////Assert.AreEqual(12, subtract, "Example Has wrong value did you changed it?");
+
+        }
 
         //        /// <summary>
         //        /// Extra exercise
@@ -141,10 +158,14 @@ namespace CSharp_Basics
         //        /// Display them - you can do it Console.WriteLine(yourVariable);
         //        /// Try to explain what happened.
         //        /// </summary>
-        //        public void Default_Values()
-        //        {
-        //           
-        //        }
+        public void Default_Values()
+        {
+            int i;
+            var x = 5.0m;
+            char a = '1';
+            string z = "asasasa \" \n \t \\sasa sas";
+            a = z[2];
+        }
 
         //Additonal read:
         // There are more types we didn't cover but it is worth knowing about
