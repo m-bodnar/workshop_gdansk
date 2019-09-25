@@ -79,13 +79,15 @@ namespace CSharp_Basics
         //        /// From theString return word "thing".
         //        /// hint use Substring() method
         //        /// </summary>
-        //        [Test]
-        //        public void Substrings()
-        //        {
-        //            var theString =
-        //                "The interesting thing about London is that there are always stylish surprises around every corner.";
-        //
-        //            Assert.AreEqual(result,"thing");
-        //        }
+        [Test]
+        public void Substrings()
+        {
+            var theString =
+                "The interesting thing about London is that there are always stylish surprises around every corner.";
+
+            string result = theString.Substring(16, 5);
+
+            Assert.AreEqual(result, "thing");
+        }
     }
 }
