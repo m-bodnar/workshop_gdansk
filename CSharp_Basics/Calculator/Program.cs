@@ -117,12 +117,27 @@ namespace Calculator
 
             //Console.ReadKey();
 
-            bool isRunning = true;
-            while (isRunning)
+            // bool isRunning = true;
+            while (true)
             {
+                int parseA;
+                int parseB;
 
-                int parseA = GetValueFromUser("Podaj wartosc liczby A");
-                int parseB = GetValueFromUser("Podaj wartosc liczby B");
+                while (true)
+                
+                {
+                    parseA = GetValueFromUser("Podaj wartosc liczby A");
+                    parseB = GetValueFromUser("Podaj wartosc liczby B");
+
+                    if(parseA == 0 || parseB== 0)
+                    {
+                        Console.WriteLine("Podaj poprawne wartosci");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
 
                 double result = 0;
 
@@ -143,7 +158,6 @@ namespace Calculator
 
                 Console.WriteLine("Wynik to:" + " " + result);
             }
-            Console.ReadKey();
         }
 
         public static int GetValueFromUser(string message)
