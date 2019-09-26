@@ -116,50 +116,57 @@ namespace Calculator
 
             //Console.ReadKey();
             
+            
             Console.WriteLine("Basic operations on integers:");
 
             Console.WriteLine("Podaj wartosc liczby a");
-            string a = Console.ReadLine();
-            int parsea = int.Parse(a);
+            string A = Console.ReadLine();
+            int parseA = 0;
+            if(!int.TryParse(A, out parseA))
+            {
+                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parseA}");
+            }
+            // int parsea = int.Parse(a);
 
             Console.WriteLine("Podaj wartosc liczby b");
-            string b = Console.ReadLine();
-            int parseb = int.Parse(b);
+            string B = Console.ReadLine();
+            int parseB = 0;
+            if (!int.TryParse(B, out parseB))
+            {
+                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parseB}");
+            }
+            // int parseb = int.Parse(b);
 
             Console.WriteLine("Podaj operator");
             string operation = Console.ReadLine();
             double result = 0;
 
-            //switch(operation)
-            //{
-            //    case "+":
-            //        result = Add(parsea, parseb);
-            //        break;
-            //    case "-":
-            //        result = Subtract(parsea, parseb);
-            //        break;
-            //    case "/":
-            //        if (parsea == 0)
-            //        {
-            //            Console.WriteLine("Nie dziel przez zero!");
-            //            break;
-            //        }
-            //        result = Divide(parsea, parseb);
-            //        break;
-            //    case "x":
-            //    case "*":
-            //        result = Multiply(parsea, parseb);
-            //        break;
-
-            //    default:
-            //        Console.WriteLine("Nieznana operacja");
-            //        break;
-            //}
-
-            if(operation == "/" && parsea == 0)
+            switch (operation)
             {
-                Console.WriteLine("Nie dziel przez zero!");
+                case "+":
+                    result = Add(parseA, parseB);
+                    break;
+                case "-":
+                    result = Subtract(parseA, parseB);
+                    break;
+                case "/":
+                    if (parseA == 0)
+                    {
+                        Console.WriteLine("Nie dziel przez zero!");
+                        break;
+                    }
+                    result = Divide(parseA, parseB);
+                    break;
+                case "x":
+                case "*":
+                    result = Multiply(parseA, parseB);
+                    break;
+
+                default:
+                    Console.WriteLine("Nieznana operacja");
+                    break;
             }
+
 
             Console.WriteLine("Wynik to:" + " " + result);
 
