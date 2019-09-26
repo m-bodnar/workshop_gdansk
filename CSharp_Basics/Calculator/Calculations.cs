@@ -8,29 +8,29 @@ namespace Calculator
 {
     public static class Calculations
     {
-        public static int DoMath(string operation, int parseA, int parseB)
+        public static double DoMath(MathData mathData)
         {
             int result = 0;
 
-            switch (operation)
+            switch (mathData.Operation)
             {
                 case "+":
-                    result = Add(parseA, parseB);
+                    result = Add(mathData.firstNumber, mathData.secondNumber);
                     break;
                 case "-":
-                    result = Subtract(parseA, parseB);
+                    result = Subtract(mathData.firstNumber, mathData.secondNumber);
                     break;
                 case "/":
-                    if (parseA == 0)
+                    if (mathData.firstNumber == 0)
                     {
                         Console.WriteLine("Nie dziel przez zero!");
                         break;
                     }
-                    result = Divide(parseA, parseB);
+                    result = Divide(mathData.firstNumber, mathData.secondNumber);
                     break;
                 case "x":
                 case "*":
-                    result = Multiply(parseA, parseB);
+                    result = Multiply(mathData.firstNumber, mathData.secondNumber);
                     break;
 
                 default:

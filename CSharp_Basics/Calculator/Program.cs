@@ -13,12 +13,12 @@ namespace Calculator
 
         static void Main(string[] args)
         {
-            
-            // bool isRunning = true;
             while (!quit)
             {
-                
-                int parseA = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby A");
+                MathData mathData = new MathData();
+
+                mathData.firstNumber = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby A");
+
                 if (quit)
                 {
                     Console.WriteLine("Zamykam aplikację");
@@ -26,7 +26,7 @@ namespace Calculator
                     return;
                 }
 
-                int parseB = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby B");
+                mathData.secondNumber = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby B");
                 if (quit)
                 {
                     Console.WriteLine("Zamykam aplikację");
@@ -36,10 +36,9 @@ namespace Calculator
 
                 double result = 0;
 
-                string operationSign = GetInformationFromUser.GetOperationFromUser();
+                mathData.Operation = GetInformationFromUser.GetOperationFromUser();
                 
-                result = Calculations.DoMath(operationSign, parseA, parseB);
-
+                result = Calculations.DoMath(mathData);
 
                 Console.WriteLine("Wynik to:" + " " + result);
             }                
