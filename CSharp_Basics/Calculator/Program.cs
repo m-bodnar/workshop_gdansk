@@ -95,19 +95,23 @@ namespace Calculator
                 result = Subtract(parsea, parseb);
             }
 
-            if (operation == "+")
+            else if (operation == "+")
             {
                 result = Add(parsea, parseb);
             }
 
-            if (operation == "/")
+            else if (operation == "/")
             {
                 result = Divide(parsea, parseb);
             }
 
-            if (operation == "*")
+            else if (operation == "*")
             {
                 result = Multiply(parsea, parseb);
+            }
+            else
+            {
+                Console.WriteLine("Nieznana operacja");
             }
 
             Console.WriteLine("Wynik to:" + " " + result);
