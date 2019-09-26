@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using Calculator;
 
 namespace CalculatorTests
 {
@@ -7,8 +8,12 @@ namespace CalculatorTests
     public class UnitTest1
     {
         [Test]
-        public void TestMethod1()
+        public void AddingOperation()
         {
+            MathData mathData = new MathData(5, 3, "+");
+            var result = Calculations.DoMath(mathData);
+
+            Assert.AreEqual(8, result);
         }
     }
 }
