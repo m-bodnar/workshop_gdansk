@@ -10,18 +10,40 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
+            //Console.WriteLine("Basic operations on integers:");
+
+            //int x = 4;
+            //int y = 6;
+
+            //int add = x + y;
+            //int subtract = y - x;
+            //int multiply = x * y;
+
+            //Console.WriteLine("x + y =" + " " + add);
+            //Console.WriteLine("y - x =" + " " + subtract);
+            //Console.WriteLine("x * y =" + " " + multiply);
+
+            //// okno pozostaje otwarte; zamyka okno po naciśnięciu Enter
+            //// Console.ReadLine();
+
+            //// okno pozostaje otwarte; zamyka okno po naciśnięciu jakiegokolwiek przycisku
+            //Console.ReadKey();
+
             Console.WriteLine("Basic operations on integers:");
 
-            int x = 4;
-            int y = 6;
+            Console.WriteLine("Podaj wartosc liczby a");
+            string a = Console.ReadLine();
+            int parsea = int.Parse(a);
 
-            int add = x + y;
-            int subtract = y - x;
-            int multiply = x * y;
+            Console.WriteLine("Podaj wartosc liczby b");
+            string b = Console.ReadLine();
+            int parseb = int.Parse(b);
 
-            Console.WriteLine("x + y =" + " " + add);
-            Console.WriteLine("y - x =" + " " + subtract);
-            Console.WriteLine("x * y =" + " " + multiply);
+            int add = parsea + parseb;
+            int subtract = parseb - parsea;
+
+            Console.WriteLine("a + b =" + " " + add);
+            Console.WriteLine("b - a =" + " " + subtract);
 
             // okno pozostaje otwarte; zamyka okno po naciśnięciu Enter
             // Console.ReadLine();
@@ -29,5 +51,7 @@ namespace Calculator
             // okno pozostaje otwarte; zamyka okno po naciśnięciu jakiegokolwiek przycisku
             Console.ReadKey();
         }
+
+
     }
 }
