@@ -119,10 +119,34 @@ namespace Calculator
             int parseA = GetValueFromUser("Podaj wartosc liczby A");
             int parseB = GetValueFromUser("Podaj wartosc liczby B");
 
-            Console.WriteLine("Podaj operator");
-            string operation = Console.ReadLine();
             double result = 0;
 
+            Console.WriteLine("Podaj operator");
+            string operationSign = Console.ReadLine();
+            result = OperationSwitch(operationSign, parseA, parseB);
+
+            
+            Console.WriteLine("Wynik to:" + " " + result);
+
+            Console.ReadKey();
+        }
+
+        public static int GetValueFromUser(string message)
+        {
+            Console.WriteLine(message);
+            string valueFromUser = Console.ReadLine();
+            int parsedNumber = 0;
+            if (!int.TryParse(valueFromUser, out parsedNumber))
+            {
+                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parsedNumber}");
+            }
+            return parsedNumber;
+        }
+
+        public static int OperationSwitch(string operation, int parseA, int parseB)
+        {
+            int result = 0;
+            
             switch (operation)
             {
                 case "+":
@@ -149,23 +173,9 @@ namespace Calculator
                     break;
             }
 
-
-            Console.WriteLine("Wynik to:" + " " + result);
-
-            Console.ReadKey();
+            return result;
         }
 
-        public static int GetValueFromUser(string message)
-        {
-            Console.WriteLine(message);
-            string valueFromUser = Console.ReadLine();
-            int parsedNumber = 0;
-            if (!int.TryParse(valueFromUser, out parsedNumber))
-            {
-                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parsedNumber}");
-            }
-            return parsedNumber;
-        }
 
         public static int Add(int firstNumber, int secondNumber)
         {
