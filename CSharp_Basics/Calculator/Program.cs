@@ -115,27 +115,9 @@ namespace Calculator
             //Console.WriteLine("Wynik to:" + " " + result);
 
             //Console.ReadKey();
-            
-            
-            Console.WriteLine("Basic operations on integers:");
 
-            Console.WriteLine("Podaj wartosc liczby a");
-            string A = Console.ReadLine();
-            int parseA = 0;
-            if(!int.TryParse(A, out parseA))
-            {
-                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parseA}");
-            }
-            // int parseA = int.Parse(A);
-
-            Console.WriteLine("Podaj wartosc liczby b");
-            string B = Console.ReadLine();
-            int parseB = 0;
-            if (!int.TryParse(B, out parseB))
-            {
-                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parseB}");
-            }
-            // int parseB = int.Parse(B);
+            int parseA = GetValueFromUser("Podaj wartosc liczby A");
+            int parseB = GetValueFromUser("Podaj wartosc liczby B");
 
             Console.WriteLine("Podaj operator");
             string operation = Console.ReadLine();
@@ -171,6 +153,18 @@ namespace Calculator
             Console.WriteLine("Wynik to:" + " " + result);
 
             Console.ReadKey();
+        }
+
+        public static int GetValueFromUser(string message)
+        {
+            Console.WriteLine(message);
+            string A = Console.ReadLine();
+            int parseA = 0;
+            if (!int.TryParse(A, out parseA))
+            {
+                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parseA}");
+            }
+            return parseA;
         }
 
         public static int Add(int firstNumber, int secondNumber)
