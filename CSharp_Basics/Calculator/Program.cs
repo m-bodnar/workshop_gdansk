@@ -120,24 +120,9 @@ namespace Calculator
             // bool isRunning = true;
             while (true)
             {
-                int parseA;
-                int parseB;
 
-                while (true)
-                
-                {
-                    parseA = GetValueFromUser("Podaj wartosc liczby A");
-                    parseB = GetValueFromUser("Podaj wartosc liczby B");
-
-                    if(parseA == 0 || parseB== 0)
-                    {
-                        Console.WriteLine("Podaj poprawne wartosci");
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
+                int parseA = GetValueFromUser("Podaj wartosc liczby A");
+                int parseB = GetValueFromUser("Podaj wartosc liczby B");
 
                 double result = 0;
 
@@ -162,12 +147,17 @@ namespace Calculator
 
         public static int GetValueFromUser(string message)
         {
-            Console.WriteLine(message);
-            string valueFromUser = Console.ReadLine();
+            bool parssed = false;
             int parsedNumber = 0;
-            if (!int.TryParse(valueFromUser, out parsedNumber))
+            while (!parssed)
             {
-                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parsedNumber}");
+                Console.WriteLine(message);
+                string valueFromUser = Console.ReadLine();
+                parssed = int.TryParse(valueFromUser, out parsedNumber);
+                if(!parssed)
+                {
+                    message = $"Wartość {valueFromUser} nie jest liczbą. Podaj liczbę.";
+                }
             }
             return parsedNumber;
         }
