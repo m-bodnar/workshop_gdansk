@@ -130,30 +130,35 @@ namespace Calculator
             string operation = Console.ReadLine();
             double result = 0;
 
-            switch(operation)
-            {
-                case "+":
-                    result = Add(parsea, parseb);
-                    break;
-                case "-":
-                    result = Subtract(parsea, parseb);
-                    break;
-                case "/":
-                    if (parsea == 0)
-                    {
-                        Console.WriteLine("Nie dziel przez zero!");
-                        break;
-                    }
-                    result = Divide(parsea, parseb);
-                    break;
-                case "x":
-                case "*":
-                    result = Multiply(parsea, parseb);
-                    break;
+            //switch(operation)
+            //{
+            //    case "+":
+            //        result = Add(parsea, parseb);
+            //        break;
+            //    case "-":
+            //        result = Subtract(parsea, parseb);
+            //        break;
+            //    case "/":
+            //        if (parsea == 0)
+            //        {
+            //            Console.WriteLine("Nie dziel przez zero!");
+            //            break;
+            //        }
+            //        result = Divide(parsea, parseb);
+            //        break;
+            //    case "x":
+            //    case "*":
+            //        result = Multiply(parsea, parseb);
+            //        break;
 
-                default:
-                    Console.WriteLine("Nieznana operacja");
-                    break;
+            //    default:
+            //        Console.WriteLine("Nieznana operacja");
+            //        break;
+            //}
+
+            if(operation == "/" && parsea == 0)
+            {
+                Console.WriteLine("Nie dziel przez zero!");
             }
 
             Console.WriteLine("Wynik to:" + " " + result);
