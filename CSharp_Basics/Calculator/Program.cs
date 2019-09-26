@@ -32,15 +32,15 @@ namespace Calculator
             //Console.WriteLine("Basic operations on integers:");
 
             //Console.WriteLine("Podaj wartosc liczby a");
-            //string a = Console.ReadLine();
-            //int parsea = int.Parse(a);
+            //string A = Console.ReadLine();
+            //int parseA = int.Parse(A);
 
             //Console.WriteLine("Podaj wartosc liczby b");
             //string b = Console.ReadLine();
-            //int parseb = int.Parse(b);
+            //int parseB = int.Parse(b);
 
-            //int add = parsea + parseb;
-            //int subtract = parseb - parsea;
+            //int add = parseA + parseB;
+            //int subtract = parseB - parseA;
 
             //Console.WriteLine("a + b =" + " " + add);
             //Console.WriteLine("b - a =" + " " + subtract);
@@ -54,17 +54,17 @@ namespace Calculator
             //Console.WriteLine("Basic operations on integers:");
 
             //Console.WriteLine("Podaj wartosc liczby a");
-            //string a = Console.ReadLine();
-            //int parsea = int.Parse(a);
+            //string A = Console.ReadLine();
+            //int parseA = int.Parse(A);
 
             //Console.WriteLine("Podaj wartosc liczby b");
             //string b = Console.ReadLine();
-            //int parseb = int.Parse(b);
+            //int parseB = int.Parse(b);
 
-            //int add = Add(parsea, parseb);
-            //int subtract = Subtract(parsea, parseb);
-            //int multiply = Multiply(parsea, parseb);
-            //int divide = Divide(parsea, parseb);
+            //int add = Add(parseA, parseB);
+            //int subtract = Subtract(parseA, parseB);
+            //int multiply = Multiply(parseA, parseB);
+            //int divide = Divide(parseA, parseB);
 
             //Console.WriteLine("a + b =" + " " + add);
             //Console.WriteLine("b - a =" + " " + subtract);
@@ -77,12 +77,12 @@ namespace Calculator
             //Console.WriteLine("Basic operations on integers:");
 
             //Console.WriteLine("Podaj wartosc liczby a");
-            //string a = Console.ReadLine();
-            //int parsea = int.Parse(a);
+            //string A = Console.ReadLine();
+            //int parseA = int.Parse(A);
 
             //Console.WriteLine("Podaj wartosc liczby b");
             //string b = Console.ReadLine();
-            //int parseb = int.Parse(b);
+            //int parseB = int.Parse(b);
 
             //Console.WriteLine("Podaj operator");
             //string operation = Console.ReadLine();
@@ -90,22 +90,22 @@ namespace Calculator
 
             //if (operation == "-")
             //{
-            //    result = Subtract(parsea, parseb);
+            //    result = Subtract(parseA, parseB);
             //}
 
             //else if (operation == "+")
             //{
-            //    result = Add(parsea, parseb);
+            //    result = Add(parseA, parseB);
             //}
 
             //else if (operation == "/")
             //{
-            //    result = Divide(parsea, parseb);
+            //    result = Divide(parseA, parseB);
             //}
 
             //else if (operation == "*")
             //{
-            //    result = Multiply(parsea, parseb);
+            //    result = Multiply(parseA, parseB);
             //}
             //else
             //{
@@ -126,7 +126,7 @@ namespace Calculator
             {
                 Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parseA}");
             }
-            // int parsea = int.Parse(a);
+            // int parseA = int.Parse(A);
 
             Console.WriteLine("Podaj wartosc liczby b");
             string B = Console.ReadLine();
@@ -135,7 +135,7 @@ namespace Calculator
             {
                 Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parseB}");
             }
-            // int parseb = int.Parse(b);
+            // int parseB = int.Parse(B);
 
             Console.WriteLine("Podaj operator");
             string operation = Console.ReadLine();
