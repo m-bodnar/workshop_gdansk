@@ -158,13 +158,13 @@ namespace Calculator
         public static int GetValueFromUser(string message)
         {
             Console.WriteLine(message);
-            string A = Console.ReadLine();
-            int parseA = 0;
-            if (!int.TryParse(A, out parseA))
+            string valueFromUser = Console.ReadLine();
+            int parsedNumber = 0;
+            if (!int.TryParse(valueFromUser, out parsedNumber))
             {
-                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parseA}");
+                Console.WriteLine($"Nieznana wartosc; używamy wartosci domyslnej {parsedNumber}");
             }
-            return parseA;
+            return parsedNumber;
         }
 
         public static int Add(int firstNumber, int secondNumber)
