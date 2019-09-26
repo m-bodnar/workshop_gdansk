@@ -17,7 +17,7 @@ namespace CSharp_Basics
     public class DataDrivenTestExample
     {
 
-        [TestCaseSource(typeof(TestData), "Numbers")]
+        [TestCaseSource(typeof(TestData), "NumbersToUseInTest")]
         public void TestDrivenData(IDictionary<string, string> parameters)
         {
            int numberOne= int.Parse(parameters["numberOne"]);
@@ -32,11 +32,12 @@ namespace CSharp_Basics
     public static class TestData
     {
 
-        public static IEnumerable Numbers()
+        public static IEnumerable NumbersToUseInTest()
         {
             var path = TestContext.CurrentContext.TestDirectory;
             path = string.Format(CultureInfo.CurrentCulture, "{0}{1}", path, @"\TestData\numbers.csv");
-            return ReadDataDriveFileCsv(path, new[] { "numberOne", "numberTwo", "result" }, "Numbers");
+            // w testach zmienia sie tylko nazwy kolumn w pliku csv
+            return ReadDataDriveFileCsv(path, new[] { "numberOne", "numberTwo", "result" }, "NumbersToUseInTest");
         }
 
 
