@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Calculator
@@ -116,18 +117,32 @@ namespace Calculator
 
             //Console.ReadKey();
 
-            int parseA = GetValueFromUser("Podaj wartosc liczby A");
-            int parseB = GetValueFromUser("Podaj wartosc liczby B");
+            bool isRunning = true;
+            while (isRunning)
+            {
 
-            double result = 0;
+                int parseA = GetValueFromUser("Podaj wartosc liczby A");
+                int parseB = GetValueFromUser("Podaj wartosc liczby B");
 
-            Console.WriteLine("Podaj operator");
-            string operationSign = Console.ReadLine();
-            result = OperationSwitch(operationSign, parseA, parseB);
+                double result = 0;
 
-            
-            Console.WriteLine("Wynik to:" + " " + result);
+                Console.WriteLine("Podaj operator");
+                string operationSign = Console.ReadLine();
+                
+                if (operationSign == "q")
+                {
+                    Console.WriteLine("Zamykam aplikacje");
+                    // Console.ReadKey();
+                    // automatyczne zamykanie okna po 2 sekundach
+                    Thread.Sleep(2000);
+                    return;
+                }
+                
+                result = DoMath(operationSign, parseA, parseB);
 
+
+                Console.WriteLine("Wynik to:" + " " + result);
+            }
             Console.ReadKey();
         }
 
@@ -143,7 +158,7 @@ namespace Calculator
             return parsedNumber;
         }
 
-        public static int OperationSwitch(string operation, int parseA, int parseB)
+        public static int DoMath(string operation, int parseA, int parseB)
         {
             int result = 0;
             
