@@ -8,6 +8,15 @@ namespace Calculator
 {
     public static class GetInformationFromUser
     {
+        public static void Quit()
+        {
+            Console.WriteLine("Zamykam aplikację");
+            Environment.Exit(0);
+        }
+        private static bool IsQuit(string userInput)
+        {
+            return userInput == "q";
+        }
         public static MathData GetAllValuesFromCustromer()
         {
             int first = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby A");
@@ -24,10 +33,9 @@ namespace Calculator
             {
                 Console.WriteLine(message);
                 string valueFromUser = Console.ReadLine();
-                if (valueFromUser == "q")
+                if (IsQuit(valueFromUser))
                 {
-                    Console.WriteLine("Zamykam aplikację");
-                    Environment.Exit(0);
+                    Quit();
                 }
                 parssed = int.TryParse(valueFromUser, out parsedNumber);
                 if (!parssed)
@@ -42,10 +50,9 @@ namespace Calculator
             Console.WriteLine("Podaj operator");
             string operationSign = Console.ReadLine();
 
-            if (operationSign == "q")
+            if (IsQuit(operationSign))
             {
-                Console.WriteLine("Zamykam aplikację");
-                Environment.Exit(0);
+                Quit();
             }
             return operationSign;
         }
