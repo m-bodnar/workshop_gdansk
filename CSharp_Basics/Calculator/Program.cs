@@ -18,7 +18,7 @@ namespace Calculator
             while (!quit)
             {
                 
-                int parseA = GetValueFromUser("Podaj wartosc liczby A");
+                int parseA = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby A");
                 if (quit)
                 {
                     Console.WriteLine("Zamykam aplikację");
@@ -26,7 +26,7 @@ namespace Calculator
                     return;
                 }
 
-                int parseB = GetValueFromUser("Podaj wartosc liczby B");
+                int parseB = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby B");
                 if (quit)
                 {
                     Console.WriteLine("Zamykam aplikację");
@@ -36,45 +36,13 @@ namespace Calculator
 
                 double result = 0;
 
-                Console.WriteLine("Podaj operator");
-                string operationSign = Console.ReadLine();
-                
-                if (operationSign == "q")
-                {
-                    Console.WriteLine("Zamykam aplikacje");
-                    // Console.ReadKey();
-                    // automatyczne zamykanie okna po 2 sekundach
-                    Thread.Sleep(2000);
-                    return;
-                }
+                string operationSign = GetInformationFromUser.GetOperationFromUser();
                 
                 result = Calculations.DoMath(operationSign, parseA, parseB);
 
 
                 Console.WriteLine("Wynik to:" + " " + result);
-            }
-        }
-
-        public static int GetValueFromUser(string message)
-        {
-            bool parssed = false;
-            int parsedNumber = 0;
-            while (!parssed)
-            {
-                Console.WriteLine(message);
-                string valueFromUser = Console.ReadLine();
-                if(valueFromUser == "q")
-                {
-                    Console.WriteLine("Zamykam aplikację");
-                    Environment.Exit(0);
-                }
-                parssed = int.TryParse(valueFromUser, out parsedNumber);
-                if(!parssed)
-                {
-                    message = $"Wartość {valueFromUser} nie jest liczbą. Podaj liczbę.";
-                }
-            }
-            return parsedNumber;
+            }                
         }
     }
 }
