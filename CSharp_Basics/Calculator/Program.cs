@@ -48,7 +48,7 @@ namespace Calculator
                     return;
                 }
                 
-                result = DoMath(operationSign, parseA, parseB);
+                result = Calculations.DoMath(operationSign, parseA, parseB);
 
 
                 Console.WriteLine("Wynik to:" + " " + result);
@@ -75,64 +75,6 @@ namespace Calculator
                 }
             }
             return parsedNumber;
-        }
-
-        public static int DoMath(string operation, int parseA, int parseB)
-        {
-            int result = 0;
-            
-            switch (operation)
-            {
-                case "+":
-                    result = Add(parseA, parseB);
-                    break;
-                case "-":
-                    result = Subtract(parseA, parseB);
-                    break;
-                case "/":
-                    if (parseA == 0)
-                    {
-                        Console.WriteLine("Nie dziel przez zero!");
-                        break;
-                    }
-                    result = Divide(parseA, parseB);
-                    break;
-                case "x":
-                case "*":
-                    result = Multiply(parseA, parseB);
-                    break;
-
-                default:
-                    Console.WriteLine("Nieznana operacja");
-                    break;
-            }
-
-            return result;
-        }
-
-
-        public static int Add(int firstNumber, int secondNumber)
-        {
-            int result = firstNumber + secondNumber;
-            return result;
-        }
-
-        public static int Subtract(int firstNumber, int secondNumber)
-        {
-            int result = secondNumber - firstNumber;
-            return result;
-        }
-
-        public static int Multiply(int firstNumber, int secondNumber)
-        {
-            int result = firstNumber * secondNumber;
-            return result;
-        }
-
-        public static int Divide(int firstNumber, int secondNumber)
-        {
-            int result = firstNumber / secondNumber;
-            return result;
         }
     }
 }
