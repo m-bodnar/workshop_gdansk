@@ -65,8 +65,8 @@ namespace Calculator
                 string valueFromUser = Console.ReadLine();
                 if(valueFromUser == "q")
                 {
-                    quit = true;
-                    return 0;
+                    Console.WriteLine("Zamykam aplikację");
+                    Environment.Exit(0);
                 }
                 parssed = int.TryParse(valueFromUser, out parsedNumber);
                 if(!parssed)
