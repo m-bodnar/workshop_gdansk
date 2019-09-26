@@ -73,8 +73,50 @@ namespace Calculator
 
             //Console.ReadKey();
 
-            
-            // + - / *
+
+            //// + - / *
+            //Console.WriteLine("Basic operations on integers:");
+
+            //Console.WriteLine("Podaj wartosc liczby a");
+            //string a = Console.ReadLine();
+            //int parsea = int.Parse(a);
+
+            //Console.WriteLine("Podaj wartosc liczby b");
+            //string b = Console.ReadLine();
+            //int parseb = int.Parse(b);
+
+            //Console.WriteLine("Podaj operator");
+            //string operation = Console.ReadLine();
+            //double result = 0;
+
+            //if (operation == "-")
+            //{
+            //    result = Subtract(parsea, parseb);
+            //}
+
+            //else if (operation == "+")
+            //{
+            //    result = Add(parsea, parseb);
+            //}
+
+            //else if (operation == "/")
+            //{
+            //    result = Divide(parsea, parseb);
+            //}
+
+            //else if (operation == "*")
+            //{
+            //    result = Multiply(parsea, parseb);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Nieznana operacja");
+            //}
+
+            //Console.WriteLine("Wynik to:" + " " + result);
+
+            //Console.ReadKey();
+
 
             Console.WriteLine("Basic operations on integers:");
 
@@ -90,28 +132,24 @@ namespace Calculator
             string operation = Console.ReadLine();
             double result = 0;
 
-            if (operation == "-")
+            switch(operation)
             {
-                result = Subtract(parsea, parseb);
-            }
+                case "+":
+                    result = Add(parsea, parseb);
+                    break;
+                case "-":
+                    result = Subtract(parsea, parseb);
+                    break;
+                case "/":
+                    result = Divide(parsea, parseb);
+                    break;
+                case "*":
+                    result = Multiply(parsea, parseb);
+                    break;
 
-            else if (operation == "+")
-            {
-                result = Add(parsea, parseb);
-            }
-
-            else if (operation == "/")
-            {
-                result = Divide(parsea, parseb);
-            }
-
-            else if (operation == "*")
-            {
-                result = Multiply(parsea, parseb);
-            }
-            else
-            {
-                Console.WriteLine("Nieznana operacja");
+                default:
+                    Console.WriteLine("Nieznana operacja");
+                    break;
             }
 
             Console.WriteLine("Wynik to:" + " " + result);
