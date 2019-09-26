@@ -73,7 +73,6 @@ namespace Calculator
 
             //Console.ReadKey();
 
-
             //// + - / *
             //Console.WriteLine("Basic operations on integers:");
 
@@ -116,8 +115,7 @@ namespace Calculator
             //Console.WriteLine("Wynik to:" + " " + result);
 
             //Console.ReadKey();
-
-
+            
             Console.WriteLine("Basic operations on integers:");
 
             Console.WriteLine("Podaj wartosc liczby a");
@@ -141,8 +139,14 @@ namespace Calculator
                     result = Subtract(parsea, parseb);
                     break;
                 case "/":
+                    if (parsea == 0)
+                    {
+                        Console.WriteLine("Nie dziel przez zero!");
+                        break;
+                    }
                     result = Divide(parsea, parseb);
                     break;
+                case "x":
                 case "*":
                     result = Multiply(parsea, parseb);
                     break;
