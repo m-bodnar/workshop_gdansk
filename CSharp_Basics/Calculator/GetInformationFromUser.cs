@@ -8,6 +8,14 @@ namespace Calculator
 {
     public static class GetInformationFromUser
     {
+        public static MathData GetAllValuesFromCustromer()
+        {
+            int first = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby A");
+            int second = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby B");
+            string operation = GetInformationFromUser.GetOperationFromUser();
+
+            return new MathData(first, second, operation);
+        }
         public static int GetValueFromUser(string message)
         {
             bool parssed = false;

@@ -9,36 +9,13 @@ namespace Calculator
 {
     public class Program
     {
-        static bool quit = false;
-
         static void Main(string[] args)
         {
-            while (!quit)
+            while (true)
             {
-                MathData mathData = new MathData();
-
-                mathData.firstNumber = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby A");
-
-                if (quit)
-                {
-                    Console.WriteLine("Zamykam aplikację");
-                    Console.ReadKey();
-                    return;
-                }
-
-                mathData.secondNumber = GetInformationFromUser.GetValueFromUser("Podaj wartosc liczby B");
-                if (quit)
-                {
-                    Console.WriteLine("Zamykam aplikację");
-                    Console.ReadKey();
-                    return;
-                }
-
-                double result = 0;
-
-                mathData.Operation = GetInformationFromUser.GetOperationFromUser();
+                MathData mathData = GetInformationFromUser.GetAllValuesFromCustromer();
                 
-                result = Calculations.DoMath(mathData);
+                double result = Calculations.DoMath(mathData);
 
                 Console.WriteLine("Wynik to:" + " " + result);
             }                

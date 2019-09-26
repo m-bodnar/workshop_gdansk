@@ -15,22 +15,22 @@ namespace Calculator
             switch (mathData.Operation)
             {
                 case "+":
-                    result = Add(mathData.firstNumber, mathData.secondNumber);
+                    result = Add(mathData.FirstNumber, mathData.SecondNumber);
                     break;
                 case "-":
-                    result = Subtract(mathData.firstNumber, mathData.secondNumber);
+                    result = Subtract(mathData.FirstNumber, mathData.SecondNumber);
                     break;
                 case "/":
-                    if (mathData.firstNumber == 0)
+                    if (mathData.FirstNumber == 0)
                     {
                         Console.WriteLine("Nie dziel przez zero!");
                         break;
                     }
-                    result = Divide(mathData.firstNumber, mathData.secondNumber);
+                    result = Divide(mathData.FirstNumber, mathData.SecondNumber);
                     break;
                 case "x":
                 case "*":
-                    result = Multiply(mathData.firstNumber, mathData.secondNumber);
+                    result = Multiply(mathData.FirstNumber, mathData.SecondNumber);
                     break;
 
                 default:
@@ -41,27 +41,27 @@ namespace Calculator
             return result;
         }
         
-        private static int Add(int firstNumber, int secondNumber)
+        private static int Add(int FirstNumber, int SecondNumber)
         {
-            int result = firstNumber + secondNumber;
+            int result = FirstNumber + SecondNumber;
             return result;
         }
 
-        private static int Subtract(int firstNumber, int secondNumber)
+        private static int Subtract(int FirstNumber, int SecondNumber)
         {
-            int result = secondNumber - firstNumber;
+            int result = SecondNumber - FirstNumber;
             return result;
         }
 
-        private static int Multiply(int firstNumber, int secondNumber)
+        private static int Multiply(int FirstNumber, int SecondNumber)
         {
-            int result = firstNumber * secondNumber;
+            int result = FirstNumber * SecondNumber;
             return result;
         }
 
-        private static int Divide(int firstNumber, int secondNumber)
+        private static int Divide(int FirstNumber, int SecondNumber)
         {
-            int result = firstNumber / secondNumber;
+            int result = FirstNumber / SecondNumber;
             return result;
         }
     }

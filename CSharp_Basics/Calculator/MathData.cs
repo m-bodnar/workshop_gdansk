@@ -8,8 +8,15 @@ namespace Calculator
 {
     public class MathData
     {
-        public int firstNumber;
-        public int secondNumber;
+        public int FirstNumber;
+        public int SecondNumber;
         public string Operation;
+
+        public MathData(int firstNumber, int secondNumber, string operation)
+        {
+            FirstNumber = firstNumber;
+            SecondNumber = secondNumber;
+            Operation = operation;
+        }
     }
 }
