@@ -64,10 +64,12 @@ namespace Calculator
             int add = Add(parsea, parseb);
             int subtract = Subtract(parsea, parseb);
             int multiply = Multiply(parsea, parseb);
+            int divide = Divide(parsea, parseb);
            
             Console.WriteLine("a + b =" + " " + add);
             Console.WriteLine("b - a =" + " " + subtract);
             Console.WriteLine("a * b =" + " " + multiply);
+            Console.WriteLine("a / b =" + " " + divide);
 
             Console.ReadKey();
         }
@@ -90,6 +92,10 @@ namespace Calculator
             return result;
         }
 
-
+        public static int Divide(int firstNumber, int secondNumber)
+        {
+            int result = firstNumber / secondNumber;
+            return result;
+        }
     }
 }
