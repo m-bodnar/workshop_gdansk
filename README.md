@@ -12,3 +12,5 @@ https://www.goodreads.com/book/show/18043011-clean-architecture
 https://www.amazon.com/gp/product/0134291069/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0134291069&linkCode=as2&tag=thebrokentest-20&linkId=959d162eb8188e42d5a397332e85abab
 
 https://www.pluralsight.com/courses/automated-testing-framework-selenium
+
+https://www.martinfowler.com/bliki/TestDouble.html
