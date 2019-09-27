@@ -18,3 +18,5 @@ https://www.martinfowler.com/bliki/TestDouble.html
 http://flukeout.github.io/- do nauki css!!!
 
 github/nunit/docs/wiki/Attributes
+
+galenframework.com - testuje wygląd aplikacji na wielu stronach
