@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace SeleniumTest.Pages
 {
@@ -23,11 +24,12 @@ namespace SeleniumTest.Pages
 
     public void GoToPage()
         {
-            driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=contact");
-            // driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
+            string url = ConfigurationManager.AppSettings["url"];
+            driver.Navigate().GoToUrl($"{url}/index.php?controller=contact");
+            // driver.Navigate().GoToUrl($"{url}");
         }
 
-    public void ClickSubmitbutton()
+        public void ClickSubmitbutton()
         {
             driver.FindElement(submitButtonLocator).Click();
         }

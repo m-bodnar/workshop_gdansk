@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,8 @@ namespace SeleniumTest.Pages
         }
         public void GoToHomePage()
         {
-            driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
+            string url = ConfigurationManager.AppSettings["url"];
+            driver.Navigate().GoToUrl($"{url}");
         }
         public void ClickCategoryHeader()
         {
