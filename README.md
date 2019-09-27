@@ -16,3 +16,5 @@ https://www.pluralsight.com/courses/automated-testing-framework-selenium
 https://www.martinfowler.com/bliki/TestDouble.html
 
 http://flukeout.github.io/- do nauki css!!!
+
+github/nunit/docs/wiki/Attributes
