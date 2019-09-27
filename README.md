@@ -14,3 +14,5 @@ https://www.amazon.com/gp/product/0134291069/ref=as_li_tl?ie=UTF8&camp=1789&crea
 https://www.pluralsight.com/courses/automated-testing-framework-selenium
 
 https://www.martinfowler.com/bliki/TestDouble.html
+
+http://flukeout.github.io/- do nauki css!!!
