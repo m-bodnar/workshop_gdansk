@@ -28,7 +28,7 @@ namespace SeleniumTest
             Assert.IsTrue(errorMessage.Displayed, "Error message was not displayed");
             Assert.AreEqual("Invalid email address.", errorMessage.Text);
 
-            // Assert.AreEqual("Invalid email address.", errorMessage.Text); można zapisac jako: 
+            // Assert.AreEqual("Invalid email address.", errorMessage.Text); można też zapisać jako: 
             // Assert.That(errorMessage.Text, Is.EqualTo("Invalid email address.")); 
             // czytelniejsza wersja
         }
