@@ -11,12 +11,14 @@ namespace SeleniumTest.Pages
     public class ContactUsPage
     {
         private IWebDriver driver;
+        private WebDriverWait waitDriver;
         private By submitButtonLocator = By.CssSelector("#submitMessage");
         private By errorMessageLocator = By.CssSelector(".alert-danger li");
 
         public ContactUsPage(IWebDriver driver)
         {
             this.driver = driver;
+            waitDriver = new WebDriverWait(driver, new System.TimeSpan(0, 0, 15));
         }
 
     public void GoToPage()
@@ -30,11 +32,15 @@ namespace SeleniumTest.Pages
             driver.FindElement(submitButtonLocator).Click();
         }
 
-    public string GetErrorMessage()
+    public string GetErrorMessageText()
         {
-            WebDriverWait waitDriver = new WebDriverWait(driver, new System.TimeSpan(0, 0, 15));
             var errorMessage = waitDriver.Until(ExpectedConditions.ElementExists(errorMessageLocator));
             return errorMessage.Text;
+        }
+    public bool IsErrorMessageDisplayed()
+        {
+            var errorMessage = waitDriver.Until(ExpectedConditions.ElementExists(errorMessageLocator));
+            return errorMessage.Displayed;
         }
     }
 }

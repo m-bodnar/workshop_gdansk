@@ -26,13 +26,14 @@ namespace SeleniumTest
             // var button = driver.FindElement(By.CssSelector("#submitMessage"));
             // button.Click();
 
-            var errorMessage = sut.GetErrorMessage();
+            var errorMessage = sut.GetErrorMessageText();
             // WebDriverWait waitDriver = new WebDriverWait(driver, new System.TimeSpan(0, 0, 15));
             // var errorMessage = waitDriver.Until(ExpectedConditions.ElementExists(By.CssSelector(".alert-danger li")));
 
             // var errorMessage = driver.FindElement(By.CssSelector(".alert-danger li"));
 
             Assert.That(errorMessage, Contains.Substring("Invalid email address."));
+            Assert.IsTrue(sut.IsErrorMessageDisplayed(), "Error message was not displayed");
         }
     }
 }
